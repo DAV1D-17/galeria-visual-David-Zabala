@@ -1,0 +1,152 @@
+/* COLORES (variables) */
+:root {
+    /* defino un apodo para x color y asi no tengo que buscarlo por su hexadecimal y solo tengo que escribir el apodo designado */
+    --bg-color: #ffffff;
+    --card-bg: #ffffff;
+    --text-color: #000000;
+    --accent-color: #6c5ce7; 
+}
+
+/* -configuracion del body */
+body {
+    margin: 0; 
+    padding: 0;
+     /* remueve el margen predeterminado del navegador */
+    font-family: 'Segoe UI', sans-serif;
+     /* cambio la fuentede escritura  de el texto*/
+    background-color: var(--bg-color);
+    color: var(--text-color);
+      /* Aplica el color de texto usando la variable definida que se encuentra arriba*/
+    box-sizing: border-box;
+    /* calcula el ancho y alto total de un elemento*/
+} 
+
+/* estilos del header o portada*/
+.main-header {
+
+    height: 50vh;
+    /* el header ocupara la mitad  de la altura de la pantalla del usuario*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /*estos 4 comandos juntos hacen que todo quede perfectamente centrado*/
+    background-size: cover;
+    /* especifica el tamaño de las imágenes de fondo. */
+    background-position: center;
+    /*define la posición inicial de la imagen de fondo especificada.*/
+}
+
+.header-content h1 {
+    font-size: 3rem;
+     /* aumenta el tamaño de la letra */
+    margin: 0; 
+    /*establece el margen para los cuatro lados*/
+    text-transform: uppercase; 
+    /* asigna las mayusculas automaticamente*/
+    letter-spacing: 2px; 
+    /* define el espaciado horizontal entre caracteres de texto */
+}
+
+/* Glaeria */
+.gallery-section {
+    /* decide qué valores de una propiedad CSS son más relevantes para un elemento y los aplica */
+    padding: 50px 20px;
+    /* establece el area de relleno de los cuatro lados de un elemento */
+    max-width: 1200px;
+   /*establece el ancho máximo de un elemento*/
+    margin: 0 auto;
+     /* centra el bloque entero en la página */
+}
+
+.gallery-grid {
+    display: grid; 
+    /* especifica si un elemento es tratado como block or inline element  */
+    
+    
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /*define el nombre de las líneas y las funciones de tamaño de linea */
+    
+    gap: 20px; 
+    /* establece la separación entre fotos */
+    row-gap: 30px; 
+    /* establece la separación entre filas */
+}
+
+/* tarjetas*/
+.card {
+    background-color: var(--card-bg); 
+    /*define el color de fondo de un elemento*/
+    border-radius: 10px; 
+    /* redondea las esquinas del borde exterior de un elemento*/
+    overflow: hidden; 
+    /* especifica si recortar contenido, dibujar barras de desplazamiento o mostrar el contenido excedente en un elemento a nivel de bloque.*/
+    transition: transform 0.3s ease;
+    /* permite definir la transiciom entre dos estados de un elemento*/
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    /*añade efectos de sombra alrededor del marco de un elemento*/
+}
+
+
+.card:hover {
+    /* efecto al pasar el cursor por arriba */
+    transform: translateY(-5px);
+     /*permite modificar el espacio de coordenadas del modelo de formato visual CSS*/
+}
+
+.card-image {
+    width: 100%;
+    height: 650px; /* Fuerzo a que todas midan lo mismo en altura */
+    background-color: #333; /* si la imagen no carga,el fondo no se verá en blanco*/
+}
+
+.card-image img {
+    width: 100%;
+    /* establece el ancho de un elemento*/
+    height: 100%;
+    /* respecifica la altura de un elemento. */
+    object-fit: cover;
+    /*indica cómo el contenido de un elemento reemplazado debería redimensionarse para ajustarse a su contenedor.*/
+    display: block; 
+    /* especifica si un elemento es tratado como block or inline element */
+}
+
+.card-info {
+    padding: 15px; 
+    /* establece el área de relleno en los cuatro lados de un elemento a la vez. */
+background-color: #1e1e1e;
+}
+
+.card-info h3 {
+    margin: 0 0 5px 0; 
+    /*establece el margen para los cuatro lados.*/
+    color: var(--accent-color); 
+    /* selecciona el valor de color de primer plano del contenido de elemento de texto*/
+    font-size: 1.1rem;
+    /*especifica la dimensión o tamaño de la letra*/
+}
+
+.card-info p {
+    margin: 0;
+     /*establece el margen para los cuatro lados.*/
+    font-size: 0.9rem; 
+  /*especifica la dimensión o tamaño de la letra*/
+    color: #ff1495; 
+    /* asigno el color de la letra */
+}
+
+/*  FINAL (Footer) */
+footer {
+    text-align: center;
+    /* establece la alineación horizontal del contenido a nivel de línea dentro de un elemento de bloque o caja de celda-tabla*/
+    padding: 20px;
+     /* establece el área de relleno en los cuatro lados de un elemento a la vez. */
+    margin-top: 40px; 
+    /*  define el área del margen superior de un elemento */
+    border-top: 1px solid #333;
+     /* establece los valores del borde */
+    font-size: 0.8rem;
+    /*especifica la dimensión o tamaño de la letra*/
+    color: #0e0d0d; 
+    /* cambia el color del texto del footer */
+}

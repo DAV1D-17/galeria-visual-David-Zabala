@@ -1,0 +1,44 @@
+
+body {
+    display: flex;             
+    flex-direction: column;     
+    align-items: center;       
+    background-color: #f0f0f0; 
+    font-family: sans-serif;
+}
+
+
+.caja {
+    width: 250px;           
+    height: 120px;          
+    margin-bottom: 25px;    
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;           
+    font-weight: bold;      
+    border: 2px solid #333;
+}
+
+
+
+
+.estilo-nombre {
+    background-color: DarkOrange;
+}
+
+.estilo-hex {
+    background-color: #8e44ad; 
+}
+
+
+.estilo-rgb {
+    background-color: rgb(39, 174, 96); 
+}
+
+
+.estilo-rgba {
+    background-color: rgba(231, 76, 60, 0.7);
+}
